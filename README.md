@@ -1,3 +1,13 @@
+=======
+myzend1
+=======
+
+app basic for config *advanced* 
+
+
+![init project zf1](http://i58.tinypic.com/10hom79.png)
+
+
 
 http://myzend1.local/default/index
 http://myzend1.local/default/index/add
@@ -57,3 +67,5 @@ http://myzend1.local/default
 # change module
 resources.frontController.defaultModule = "frontend"
 # .
+
+
