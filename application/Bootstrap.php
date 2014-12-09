@@ -38,26 +38,31 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      * @return          void
      *
      */
-    protected function _initConfig()
+    public function _initConfig()
     {
-        # get config
-        $config = new Zend_Config_Ini(APPLICATION_PATH .
-                DIRECTORY_SEPARATOR . 'configs' .
-                DIRECTORY_SEPARATOR . 'application.ini', APPLICATION_ENV);
+
+        $config = new Zend_Config($this->getOptions(), true);
+        $config->merge(new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini'));
+        $config->merge(new Zend_Config_Ini(APPLICATION_PATH . '/configs/app.ini'));
+        $config->setReadOnly();
 
         # get registery
         $this->_registry = Zend_Registry::getInstance();
 
         # save new database adapter to registry
         $this->_registry->config              = new stdClass();
-        $this->_registry->config->application = $config;
-    }
+        $this->_registry->config->application = $config;       
+
+        # start session
+        $objSessionNamespace = new Zend_Session_Namespace('Zend_Auth');
+        $objSessionNamespace->setExpirationSeconds($config->app->lifeTimeZendAuth);
+    }   
 
     /**
     * init session
     * 
     */
-    protected function __initSession() {
+    protected function _initSession() {
         Zend_Session::start();
     }        
 
