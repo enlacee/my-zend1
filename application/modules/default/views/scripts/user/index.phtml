@@ -1,0 +1,41 @@
+
+<h3>Records users</h3>    
+    <?php //echo "<pre>"; print_r($this->form->name->getMessages()); ?>
+    <?php var_dump($this->form->name->hasErrors()) ?>
+    <div class="error">
+        <?php echo "<pre>"; print_r($this->form->getMessages()) ?>
+<?php
+/*
+$errorsMessages = $this->form->getMessages();
+if(isset($errorsMessages[‘username’][‘isEmpty’])){
+echo “Username is required field.”;
+}
+if(isset($errorsMessages[‘password’][‘isEmpty’])){
+echo “Password is required field.”;
+}
+if(isset($errorsMessages[‘password’][‘stringLengthTooShort’])){
+echo “Password must be more then 6 chars.”;    
+} 
+*/
+?>        
+    </div>
+
+<form action="" method="POST">
+    Name :
+    <?php echo $this->form->name->renderViewHelper() ?>
+    <br />
+    Password :
+    <?php echo $this->form->pass->renderViewHelper() ?>
+    <br /> 
+    sexo :
+    <?php echo $this->form->sexo->renderViewHelper() ?>
+    <br />
+    csrf :
+    <?php echo $this->form->csrf->renderViewHelper() ?>
+    <br />        
+    
+    
+<?php  echo $this->form->submit->renderViewHelper(); ?>
+    
+    
+</form>

@@ -17,6 +17,9 @@ http://myzend1.local/default/index/update/id
 http://myzend1.local/default/register
 
 
+### use zend_form : validation : model :tablemodel, db
+
+http://myzend1.local/default/user/index
 
 
 
