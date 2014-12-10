@@ -10,26 +10,19 @@ app basic for config *advanced*
 
 ### step 01, 02
 
-http://myzend1.local/default/index
-http://myzend1.local/default/index/add
-http://myzend1.local/default/index/update/id
-http://myzend1.local/default/register
+* http://myzend1.local/default/index
+* http://myzend1.local/default/index/add
+* http://myzend1.local/default/index/update/id
+* http://myzend1.local/default/register
 
-# acceder al modulo promo and default
-http://myzend1.local/promo
-http://myzend1.local/default
+Acceder al los modulos :
 
-
+* http://myzend1.local/promo
+* http://myzend1.local/default
 
 ### step 03
 
-http://myzend1.local/default/user/index
-
-
-
-
-
-
+* http://myzend1.local/default/user/index
 
 
 
