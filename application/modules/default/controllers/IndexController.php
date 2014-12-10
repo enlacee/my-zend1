@@ -13,6 +13,11 @@ class Default_IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        //$f = new Default_Form_Login();
+        
+       
+        
+        //echo "<pre>"; var_dump($f); exit;
         // action body
         //$registry = Zend_Registry::getInstance();
         //echo "<pre>"; print_R($registry->get('config')->application->toArray()); EXIT;
@@ -22,6 +27,7 @@ class Default_IndexController extends Zend_Controller_Action
 
 
         $user = new Application_Model_DbTable_User();
+        
         $data = $user->getSelect();
         
         //echo "<pre>";
