@@ -8,16 +8,20 @@ app basic for config *advanced*
 ![init project zf1](http://i58.tinypic.com/10hom79.png)
 
 
+### step 01, 02
 
 http://myzend1.local/default/index
 http://myzend1.local/default/index/add
 http://myzend1.local/default/index/update/id
-
-
 http://myzend1.local/default/register
 
+# acceder al modulo promo and default
+http://myzend1.local/promo
+http://myzend1.local/default
 
-### use zend_form : validation : model :tablemodel, db
+
+
+### step 03
 
 http://myzend1.local/default/user/index
 
@@ -33,11 +37,7 @@ http://myzend1.local/default/user/index
 
 ### command line
     #  ZF1
-    # Export for use zf tool
-    # /var/www/sites/zf1/bin # functional in files not FAT32
-    # OPTION 1 :
-    export PATH=$PATH:/w/sites/zf/bin # note error no permised
-    # OPTION 2 : create link simbolic
+    # OPTION 1 : create link simbolic
     sudo ln -s /w/sites/zf/bin/zf.sh /usr/bin/zf
     # use comand
     zf show version
@@ -60,12 +60,6 @@ http://myzend1.local/default/user/index
     zf create dbtable User user
 
     # --------------------------------------------
-    # acceder al modulo promo and default
-    http://myzend1.local/promo
-    http://myzend1.local/default
-
-
-
     # confi application.ini
     # change module
     resources.frontController.defaultModule = "frontend"
